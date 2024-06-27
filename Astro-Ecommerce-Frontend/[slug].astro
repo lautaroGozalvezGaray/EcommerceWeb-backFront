@@ -1,0 +1,54 @@
+---
+import MainLayout from "./src/layouts/MainLayout.astro";
+import initialData from './public/productos.json';
+
+export async function getStaticPaths() {
+    //   const initialUrl = 'http://localhost/bagisto_test/public/api/v1/products';
+    //   const initialRequest = await fetch(initialUrl);
+    //   const initialData = await initialRequest.json();
+    //   const productsData = initialData.data;
+    
+    
+
+    const productsData = initialData;
+
+//   const lastPage = initialData.meta.last_page;
+//   const urlLinks = initialData.meta.links.url;
+
+  // Fetch data from all pagination URLs
+//   for (let page = 2; page <= lastPage; page++) {
+//     const pageUrl = `${initialUrl}?page=${page}`;
+//     const pageRequest = await fetch(pageUrl);
+//     const pageData = await pageRequest.json();
+//     productsData.push(...pageData.data);
+//   }
+
+  return productsData.map((product:any) => {
+    return {
+      params: { slug: product.url_key },
+      props: { product },
+    };
+  });
+}
+export interface Props {
+    product: any
+    name: string
+    url_key: string
+    all_images?: {}
+    image?: string
+    price?: number
+}
+
+const { product } = Astro.props;
+---
+
+
+<MainLayout>
+    <div class="flex flex-col space-y-5">
+        <a class="px-5 py-2 bg-gray-500 rounded-md w-fit" href="/shop">Go Back</a>
+        <h1>Name: {product.name}</h1>
+        <h1>URL: /{product.url_key}</h1>
+        <h1>ID: {product.id}</h1>
+        <h1>Price: {product.price}</h1>
+    </div>
+</MainLayout>

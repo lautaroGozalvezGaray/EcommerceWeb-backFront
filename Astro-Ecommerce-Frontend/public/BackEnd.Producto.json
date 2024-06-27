@@ -1,0 +1,107 @@
+[
+  {
+    "id": 0,
+    "title": "Procesador Intel Core i9",
+    "price": 499.99,
+    "thumbnail": "https://th.bing.com/th/id/OIP.E-hNpzWvX691I4AVO62lVAHaHa?w=183&h=183&c=7&r=0&o=5&pid=1.7",
+    "categoria": "Procesadores"
+  },
+  {
+    "id": 1,
+    "title": "Procesador AMD Ryzen 9",
+    "price": 549.99,
+    "thumbnail": "https://th.bing.com/th/id/OIP.Upr9Igq3htdYixEdMQZhyQHaFj?w=220&h=180&c=7&r=0&o=5&pid=1.7",
+    "categoria": "Procesadores"
+  },
+  {
+    "id": 2,
+    "title": "Procesador Intel Core i7",
+    "price": 379.99,
+    "thumbnail": "https://th.bing.com/th/id/OIP.PTMOCKMdH9CRS_fg225DHQHaHa?w=165&h=180&c=7&r=0&o=5&pid=1.7",
+    "categoria": "Procesadores"
+  },
+  {
+    "id": 3,
+    "title": "Procesador AMD Ryzen 7",
+    "price": 329.99,
+    "thumbnail": "https://th.bing.com/th/id/OIP.EUrlrce8fK-mW28Ui3EhMQHaHa?w=213&h=213&c=7&r=0&o=5&pid=1.7",
+    "categoria": "Procesadores"
+  },
+  {
+    "id": 4,
+    "title": "Procesador Intel Core i5",
+    "price": 249.99,
+    "thumbnail": "https://th.bing.com/th/id/OIP.xP4SBqLMITjkjgNwtAIrawHaHa?w=216&h=216&c=7&r=0&o=5&pid=1.7",
+    "categoria": "Procesadores"
+  },
+  {
+    "id": 5,
+    "title": "Tarjeta Gráfica NVIDIA GeForce RTX 3080",
+    "price": 699.99,
+    "thumbnail": "https://th.bing.com/th/id/OIP.FZACyeJ7peX1tSP0PcDIhAHaHa?w=175&h=180&c=7&r=0&o=5&pid=1.7",
+    "categoria": "Tarjetas Gráficas"
+  },
+  {
+    "id": 6,
+    "title": "Tarjeta Gráfica AMD Radeon RX 6800 XT",
+    "price": 649.99,
+    "thumbnail": "https://th.bing.com/th/id/OIP.Y3W8F-VV8SYV6fqnvtksgQHaJG?w=144&h=180&c=7&r=0&o=5&pid=1.7",
+    "categoria": "Tarjetas Gráficas"
+  },
+  {
+    "id": 7,
+    "title": "Tarjeta Gráfica NVIDIA GeForce RTX 3070",
+    "price": 499.99,
+    "thumbnail": "https://th.bing.com/th/id/OIP.8HDS3T4sSEarlAMYUe-s0AAAAA?w=203&h=180&c=7&r=0&o=5&pid=1.7",
+    "categoria": "Tarjetas Gráficas"
+  },
+  {
+    "id": 8,
+    "title": "Tarjeta Gráfica AMD Radeon RX 6700 XT",
+    "price": 479.99,
+    "thumbnail": "https://th.bing.com/th/id/OIP.nPbxy-uqhLnNkFL1zTxyvgHaHa?w=162&h=180&c=7&r=0&o=5&pid=1.7",
+    "categoria": "Tarjetas Gráficas"
+  },
+  {
+    "id": 9,
+    "title": "Tarjeta Gráfica NVIDIA GeForce RTX 3060",
+    "price": 399.99,
+    "thumbnail": "https://th.bing.com/th/id/OIP.SZsv622Zjgi8mv3vWo7fvwHaHa?w=203&h=203&c=7&r=0&o=5&pid=1.7",
+    "categoria": "Tarjetas Gráficas"
+  },
+  {
+    "id": 10,
+    "title": "Memoria RAM Corsair Vengeance 16GB",
+    "price": 89.99,
+    "thumbnail": "https://th.bing.com/th/id/OIP.r0YLJVGO9Ev1tMamA1BXnAHaHa?w=174&h=180&c=7&r=0&o=5&pid=1.7",
+    "categoria": "Memoria RAM"
+  },
+  {
+    "id": 11,
+    "title": "Memoria RAM G.Skill Trident Z 32GB",
+    "price": 179.99,
+    "thumbnail": "https://th.bing.com/th/id/OIP.tnSFjI3dfdMwdKf11v5BIAHaEw?w=288&h=184&c=7&r=0&o=5&pid=1.7",
+    "categoria": "Memoria RAM"
+  },
+  {
+    "id": 12,
+    "title": "Memoria RAM Kingston HyperX Fury 16GB",
+    "price": 99.99,
+    "thumbnail": "https://th.bing.com/th/id/OIP._MMhI-vmDQtBuXyeZeLboQHaEA?w=311&h=180&c=7&r=0&o=5&pid=1.7",
+    "categoria": "Memoria RAM"
+  },
+  {
+    "id": 13,
+    "title": "Memoria RAM Crucial Ballistix 16GB",
+    "price": 84.99,
+    "thumbnail": "https://th.bing.com/th/id/OIP.qVAZG3wG2nhKzTuXkg64kwHaER?w=306&h=180&c=7&r=0&o=5&pid=1.7",
+    "categoria": "Memoria RAM"
+  },
+  {
+    "id": 14,
+    "title": "Memoria RAM TeamGroup T-Force 32GB",
+    "price": 189.99,
+    "thumbnail": "https://th.bing.com/th/id/OIP.HSCHVYYcSrL_FbnbddeJiQHaFM?w=279&h=196&c=7&r=0&o=5&pid=1.7",
+    "categoria": "Memoria RAM"
+  }
+]

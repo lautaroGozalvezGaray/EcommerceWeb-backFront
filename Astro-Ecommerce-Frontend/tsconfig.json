@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    // Otras opciones de compilador
+    "allowSyntheticDefaultImports": true
+  },
+  "extends": "astro/tsconfigs/strict"
+}

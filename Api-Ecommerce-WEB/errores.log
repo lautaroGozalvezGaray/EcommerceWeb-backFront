@@ -1,0 +1,93 @@
+[2024-06-27T12:47:37.162] [ERROR] custom - There are no products
+[2024-06-27T15:15:42.092] [ERROR] custom - TypeError: Cannot read properties of null (reading 'products')
+[2024-06-27T15:16:38.234] [ERROR] custom - CastError: Cast to ObjectId failed for value "null" (type string) at path "_id" for model "carts"
+    at SchemaObjectId.cast (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\cast.js:375:32)
+    at Query.cast (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:4798:12)
+    at Query._castConditions (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:2206:10)
+    at model.Query._findOne (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:2526:8)
+    at model.Query.exec (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:4342:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async CartDaoMongoDb.getById (file:///C:/Users/lauta/Downloads/tienda-virtual-backend-main/tienda-virtual-backend-main/Api-Ecommerce-WEB/src/data_Persistence/container/mongoDbContainer.js:59:29) {
+  stringValue: '"null"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'null',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\bson\lib\bson.cjs:2361:23)
+      at castObjectId (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\cast.js:375:32)
+      at Query.cast (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:4798:12)
+      at Query._castConditions (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:2206:10)
+      at model.Query._findOne (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:2526:8)
+      at model.Query.exec (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:4342:80),
+  valueType: 'string'
+}
+[2024-06-27T15:16:38.241] [ERROR] custom - TypeError: existingProducts is not iterable
+[2024-06-27T15:20:39.693] [ERROR] custom - TypeError: Cannot read properties of null (reading 'products')
+[2024-06-27T15:22:15.745] [ERROR] custom - TypeError: Cannot read properties of null (reading 'products')
+[2024-06-27T15:34:13.744] [ERROR] custom - TypeError: existingProducts.add is not a function
+[2024-06-27T15:39:21.616] [ERROR] custom - CastError: Cast to ObjectId failed for value "null" (type string) at path "_id" for model "carts"
+    at SchemaObjectId.cast (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\cast.js:375:32)
+    at Query.cast (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:4798:12)
+    at Query._castConditions (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:2206:10)
+    at model.Query._findOne (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:2526:8)
+    at model.Query.exec (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:4342:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async CartDaoMongoDb.getById (file:///C:/Users/lauta/Downloads/tienda-virtual-backend-main/tienda-virtual-backend-main/Api-Ecommerce-WEB/src/data_Persistence/container/mongoDbContainer.js:59:29) {
+  stringValue: '"null"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'null',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\bson\lib\bson.cjs:2361:23)
+      at castObjectId (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\cast.js:375:32)
+      at Query.cast (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:4798:12)
+      at Query._castConditions (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:2206:10)
+      at model.Query._findOne (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:2526:8)
+      at model.Query.exec (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:4342:80),
+  valueType: 'string'
+}
+[2024-06-27T15:39:21.626] [ERROR] custom - CastError: Cast to ObjectId failed for value "null" (type string) at path "_id" for model "carts"
+    at SchemaObjectId.cast (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\cast.js:375:32)
+    at Query.cast (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:4798:12)
+    at Query._castConditions (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:2206:10)
+    at model.Query._updateThunk (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:3765:8)
+    at model.Query._updateOne (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:3869:23)
+    at model.Query.exec (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:4342:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  stringValue: '"null"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'null',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\bson\lib\bson.cjs:2361:23)
+      at castObjectId (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\cast.js:375:32)
+      at Query.cast (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:4798:12)
+      at Query._castConditions (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:2206:10)
+      at model.Query._updateThunk (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:3765:8)
+      at model.Query._updateOne (C:\Users\lauta\Downloads\tienda-virtual-backend-main\tienda-virtual-backend-main\Api-Ecommerce-WEB\node_modules\mongoose\lib\query.js:3869:23),
+  valueType: 'string'
+}

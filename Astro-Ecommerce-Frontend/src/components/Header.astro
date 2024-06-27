@@ -1,0 +1,140 @@
+<!-- Encabezado -->
+<header class="sticky container top-0 flex items-center md:justify-start md:flex-nowrap z-50 w-full bg-white/30 backdrop-blur-lg text-sm py-3 md:py-0 dark:bg-gray-800/50">
+    <nav class="w-full" aria-label="Global">
+      <div class="relative md:flex md:items-center md:justify-between">
+        <div class="flex items-center justify-between">
+          <a class="flex-none text-xl font-semibold dark:text-white" href="/" aria-label="Brand">Marca</a>
+          <div class="md:hidden">
+            <button type="button" class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-amber-700 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800" data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Alternar navegación">
+              <svg class="hs-collapse-open:hidden w-4 h-4" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+              </svg>
+              <svg class="hs-collapse-open:block hidden w-4 h-4" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+  
+        <div id="navbar-collapse-with-animation" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block">
+          <div class="overflow-hidden overflow-y-auto max-h-[75vh] scrollbar-y">
+            <div class="flex flex-col gap-x-0 mt-5 divide-y divide-dashed divide-gray-200 md:flex-row md:items-center md:justify-end md:gap-x-7 md:mt-0 md:pl-7 md:divide-y-0 md:divide-solid dark:divide-gray-700">
+              <a class="font-medium text-amber-800 py-3 md:py-6 dark:text-amber-700" href="/" aria-current="page">Inicio</a>
+  
+              <a class="font-medium text-gray-500 hover:text-gray-400 py-3 md:py-6 dark:text-gray-400 dark:hover:text-gray-500" href="/shop">
+                Tienda
+              </a>
+
+              <a class="font-medium text-gray-500 hover:text-gray-400 py-3 md:py-6 dark:text-gray-400 dark:hover:text-gray-500" href="/carrito">
+                Carrito 
+              </a>
+              <!-- <a class="font-medium text-gray-500 hover:text-gray-400 py-3 md:py-6 dark:text-gray-400 dark:hover:text-gray-500" href="/single-product">
+                Producto Individual
+              </a> -->
+  
+              <div class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:click] py-3 md:py-4">
+                <button type="button" class="flex items-center w-full text-gray-500 hover:text-gray-400 font-medium dark:text-gray-400 dark:hover:text-gray-500">
+                  Recursos
+                  <svg class="ml-2 w-2.5 h-2.5 text-gray-600" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                  </svg>
+                </button>
+  
+                <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-full hidden z-10 top-full left-0 min-w-[15rem] bg-white md:shadow-2xl rounded-lg py-2 md:p-4 dark:bg-gray-800 dark:divide-gray-700 before:absolute before:-top-5 before:left-0 before:w-full before:h-5">
+                  <div class="md:grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="flex flex-col mx-1 md:mx-0">
+                      <a class="group flex gap-x-5 text-gray-800 hover:bg-gray-100 rounded-md p-4 dark:text-gray-200 dark:hover:bg-gray-900" href="#">
+                        <svg class="flex-shrink-0 w-6 h-6 mt-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                        </svg>
+                        <div class="grow">
+                          <p class="font-medium text-gray-800 dark:text-gray-200">Documentos de Soporte</p>
+                          <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">Explora consejos y explicaciones para todas las características de Preline.</p>
+                        </div>
+                      </a>
+  
+                      <a class="group flex gap-x-5 text-gray-800 hover:bg-gray-100 rounded-md p-4 dark:text-gray-200 dark:hover:bg-gray-900" href="#">
+                        <svg class="flex-shrink-0 w-6 h-6 mt-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H15.5a.5.5 0 0 1 .354.854l-10 10a.5.5 0 0 1-.773-.558l2.32-5.795H.5a.5.5 0 0 1-.354-.854l10-10a.5.5 0 0 1 .605-.079z"/>
+                        </svg>
+                        <div class="grow">
+                          <p class="font-medium text-gray-800 dark:text-gray-200">Changelog</p>
+                          <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">Verifica qué actualizaciones y mejoras se han hecho en Preline.</p>
+                        </div>
+                      </a>
+                    </div>
+  
+                    <div class="flex flex-col mx-1 md:mx-0">
+                      <a class="group flex gap-x-5 text-gray-800 hover:bg-gray-100 rounded-md p-4 dark:text-gray-200 dark:hover:bg-gray-900" href="#">
+                        <svg class="flex-shrink-0 w-6 h-6 mt-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M8 0a8 8 0 1 0 4.905 14.39c.02-.04.04-.083.056-.128l.885-2.655A.5.5 0 0 0 13.366 11H9.732a.5.5 0 0 0 0 1h2.8a6.97 6.97 0 0 1-1.278 1.45H9.5c-3.59 0-6.5-2.91-6.5-6.5S5.91 2 9.5 2a6.48 6.48 0 0 1 3.832 1.25h.622a7.963 7.963 0 0 0-5.59-2.25z"/>
+                          <path d="M16 8a7.963 7.963 0 0 0-1.058-3.982.5.5 0 0 0-.9.435 7.001 7.001 0 0 1-9.684 9.684.5.5 0 0 0-.435.9A7.963 7.963 0 0 0 8 16a8 8 0 0 0 8-8z"/>
+                        </svg>
+                        <div class="grow">
+                          <p class="font-medium text-gray-800 dark:text-gray-200">Foros de la Comunidad</p>
+                          <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">Participa en discusiones y comparte ideas con otros usuarios de Preline.</p>
+                        </div>
+                      </a>
+  
+                      <a class="group flex gap-x-5 text-gray-800 hover:bg-gray-100 rounded-md p-4 dark:text-gray-200 dark:hover:bg-gray-900" href="#">
+                        <svg class="flex-shrink-0 w-6 h-6 mt-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M3.654 2.328a.5.5 0 0 1 .674-.178l5 2.5a.5.5 0 0 1 0 .894l-5 2.5a.5.5 0 0 1-.726-.447v-5a.5.5 0 0 1 .052-.22z"/>
+                          <path d="M0 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1h.5A1.5 1.5 0 0 1 14 6.5v6a1.5 1.5 0 0 1-1.5 1.5H2A2 2 0 0 1 0 12V4z"/>
+                        </svg>
+                        <div class="grow">
+                          <p class="font-medium text-gray-800 dark:text-gray-200">Tutoriales en Video</p>
+                          <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">Mira videos instructivos que te ayudarán a sacar el máximo provecho de Preline.</p>
+                        </div>
+                      </a>
+                    </div>
+  
+                    <div class="flex flex-col mx-1 md:mx-0">
+                      <a class="group flex gap-x-5 text-gray-800 hover:bg-gray-100 rounded-md p-4 dark:text-gray-200 dark:hover:bg-gray-900" href="#">
+                        <svg class="flex-shrink-0 w-6 h-6 mt-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M11.5 2a.5.5 0 0 1 .5.5V4h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1V2.5a.5.5 0 0 1 .5-.5h7zM4 4h8V2H4v2z"/>
+                        </svg>
+                        <div class="grow">
+                          <p class="font-medium text-gray-800 dark:text-gray-200">Guías de Inicio</p>
+                          <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">Consulta nuestras guías para comenzar rápidamente con Preline.</p>
+                        </div>
+                      </a>
+  
+                      <a class="group flex gap-x-5 text-gray-800 hover:bg-gray-100 rounded-md p-4 dark:text-gray-200 dark:hover:bg-gray-900" href="#">
+                        <svg class="flex-shrink-0 w-6 h-6 mt-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M7.5 1.018a1 1 0 0 1 1 0l6 3.464a1 1 0 0 1 .5.866v6.904a1 1 0 0 1-.5.866l-6 3.464a1 1 0 0 1-1 0l-6-3.464a1 1 0 0 1-.5-.866V5.348a1 1 0 0 1 .5-.866l6-3.464zM8 2.481 2 5.77v5.458l6 3.289 6-3.289V5.77L8 2.48z"/>
+                          <path d="M11.5 6a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
+                        </svg>
+                        <div class="grow">
+                          <p class="font-medium text-gray-800 dark:text-gray-200">Reportes de Incidentes</p>
+                          <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">Reporta cualquier problema o error que encuentres mientras usas Preline.</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <a class="font-medium text-gray-500 hover:text-gray-400 py-3 md:py-6 dark:text-gray-400 dark:hover:text-gray-500" href="/contacto">
+                Contacto
+              </a>
+  
+              <a class="font-medium text-gray-500 hover:text-gray-400 py-3 md:py-6 dark:text-gray-400 dark:hover:text-gray-500" href="/sobre-nosotros">
+                Sobre Nosotros
+              </a>
+
+              <div class="pt-3 md:pt-0">
+                <a class="inline-flex justify-center items-center gap-x-2 text-center bg-amber-700 hover:bg-amber-800 border border-transparent text-white text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-amber-700 focus:ring-offset-2 focus:ring-offset-white transition py-2.5 px-3 dark:focus:ring-offset-gray-800" href="/login">
+                  <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  </svg>
+                  Log in
+                </a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Fin del Encabezado -->

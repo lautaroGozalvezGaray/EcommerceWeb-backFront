@@ -1,0 +1,110 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <div class="flex flex-col pb-10">
+    <h2 class="block font-semibold text-gray-800 py-10 text-lg md:text-2xl lg:text-4xl dark:text-gray-200">
+      Carrito de compras
+    </h2>
+    <p class="text-white">Productos en tu carrito</p>
+  </div>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4" id="products-container">
+    <!-- Aquí se renderizarán los productos -->
+  </div>
+
+  <button
+    class="comprar mt-8 py-3 px-6 bg-amber-600 text-white font-semibold rounded-lg shadow-md hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-600 dark:bg-amber-700 dark:hover:bg-amber-800 dark:focus:ring-amber-800"
+  >
+    Comprar
+  </button>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      let products = localStorage.getItem("productCart");
+      if (products) {
+        products = JSON.parse(products);
+        const productsContainer = document.getElementById("products-container");
+        products.forEach((product) => {
+          const productElement = document.createElement("div");
+          productElement.classList.add("product-item", "border", "p-4", "rounded-lg", "bg-white", "dark:bg-gray-800");
+          productElement.innerHTML = `
+                        <img src="${product.image}" alt="${product.name}" class="object-cover h-40 w-full rounded-t-lg">
+                        <h3 class="mt-4 text-lg font-semibold text-gray-800 dark:text-gray-200">${product.name}</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Precio: $${product.price}</p>
+                        <p class="text-gray-600 dark:text-gray-400">Cantidad: ${product.quantity || 1}</p>
+                    `;
+          productsContainer.appendChild(productElement);
+        });
+      }
+    });
+
+
+    document.querySelectorAll("button.comprar").forEach((button) => {
+  button.addEventListener("click", async () => { // Convertir la función en async
+    try {
+      const responseCarrito = await fetch("http://localhost:8080/api/carrito/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          // "access_token": localStorage.getItem("access_token"),
+        },
+        body: JSON.stringify({
+          user: "Elias",
+        }),
+      });
+
+      const dataCarrito = await responseCarrito.json();
+      console.log(dataCarrito);
+
+      if (dataCarrito && dataCarrito.success) {
+        localStorage.setItem("order", dataCarrito.success);
+        // localStorage.removeItem("productos");
+
+        let productsJson = localStorage.getItem("productCart");
+        let products = productsJson ? JSON.parse(productsJson) : [];
+
+        if (products.length > 0) {
+          const productsMap = {};
+
+          products.forEach((product: any) => {
+            if (productsMap[product.id]) {
+              productsMap[product.id].quantity += product.quantity;
+            } else {
+              productsMap[product.id] = { ...product };
+            }
+          });
+
+          const consolidatedProducts = Object.values(productsMap);
+          
+          const dataArray = consolidatedProducts.map((productData: any) => ({
+            id: productData.id,
+            title: productData.name,
+            price: productData.price,
+            quantity: productData.quantity,
+          }));
+
+          const responseProductos = await fetch(`http://localhost:8080/api/carrito/${localStorage.getItem("order")}/products`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              // access_token: localStorage.getItem("access_token"),
+            },
+            credentials: "include",
+            body: JSON.stringify(dataArray),
+          });
+
+          const dataProductos = await responseProductos.json();
+          console.log(dataProductos);
+          localStorage.removeItem("productCart");
+        }
+      } else {
+        console.error("No se pudo generar el ID del carrito correctamente.");
+      }
+    } catch (error) {
+      console.error("Error en la operación:", error);
+    }
+  });
+});
+  </script>
+</MainLayout>

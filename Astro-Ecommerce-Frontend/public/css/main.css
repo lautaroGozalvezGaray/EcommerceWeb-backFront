@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lumanosimo&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    :root {
+        /* Colors */
+        --color-primary: 126, 76, 38;
+        --color-secondary: 249,213,115;
+        --color-primary-accent-dark: 249,213,115;
+        --color-primary-accent-light: 255, 233, 210; 
+        --color-secondary-accent-dark: 59, 38, 18;
+        --color-secondary-accent-light: 126, 76, 38; 
+
+        /* Fonts */
+        --display-font-family: 'Poppins', 'sans-serif';
+        --heading-font-family: 'Roboto Slab', 'serif';
+    }
+    .container {
+        padding-top: clamp(25px, calc(1.5625rem + ((1vw - 3.2px) * 3.125)), 75px);
+        padding-bottom: clamp(25px, calc(1.5625rem + ((1vw - 3.2px) * 3.125)), 75px);
+        /* @apply space-y-3; */
+    }
+    .container .spacing-s >  * + *,
+    .spacing-s:not(.container) > * + * {
+        @apply mt-3;
+    }
+}
+
+@layer base {
+    html {
+        height: 100%;
+        box-sizing: border-box;
+    }
+    body {
+        font-size: clamp(16px, calc(1rem + ((1vw - 3.2px) * 0.1875)), 19px);
+        min-height: 0vw;
+        font-family: var(--display-font-family);
+    }
+    h1 {
+        font-size: clamp(25px, calc(1.5625rem + ((1vw - 3.2px) * 1.4375)), 48px);
+        min-height: 0vw;
+        font-family: var(--heading-font-family);
+    }
+    h2 {
+        font-size: clamp(23px, calc(1.4375rem + ((1vw - 3.2px) * 1.0625)), 40px);
+        min-height: 0vw;
+        font-family: var(--heading-font-family);
+    }
+    h3 {
+        font-size: clamp(21px, calc(1.3125rem + ((1vw - 3.2px) * 0.6875)), 32px);
+        min-height: 0vw;
+        font-family: var(--heading-font-family);
+    }
+    h4 {
+        font-size: clamp(20px, calc(1.25rem + ((1vw - 3.2px) * 0.5)), 28px);
+        min-height: 0vw;
+        font-family: var(--heading-font-family);
+    }
+    h5{
+        font-size: clamp(18px, calc(1.125rem + ((1vw - 3.2px) * 0.3125)), 23px);
+        min-height: 0vw;
+        font-family: var(--heading-font-family);
+    }
+    h6 {
+        font-size: clamp(16px, calc(1rem + ((1vw - 3.2px) * 0.25)), 20px);
+        min-height: 0vw;
+        font-family: var(--heading-font-family);
+    }
+}
